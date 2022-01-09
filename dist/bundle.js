@@ -80,6 +80,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./public/icons/left-arrow.svg":
+/*!*************************************!*\
+  !*** ./public/icons/left-arrow.svg ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "svg-icon-left-arrow-usage",
+      viewBox: "0 0 24 24",
+      url: __webpack_require__.p + "./icons.svg#svg-icon-left-arrow",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./public/icons/logo.svg":
 /*!*******************************!*\
   !*** ./public/icons/logo.svg ***!
@@ -102,6 +124,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./public/icons/minus.svg":
+/*!********************************!*\
+  !*** ./public/icons/minus.svg ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "svg-icon-minus-usage",
+      viewBox: "0 0 27 27",
+      url: __webpack_require__.p + "./icons.svg#svg-icon-minus",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./public/icons/moon.svg":
 /*!*******************************!*\
   !*** ./public/icons/moon.svg ***!
@@ -117,6 +161,72 @@ __webpack_require__.r(__webpack_exports__);
       id: "svg-icon-moon-usage",
       viewBox: "0 0 24 24",
       url: __webpack_require__.p + "./icons.svg#svg-icon-moon",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./public/icons/pg-complete.svg":
+/*!**************************************!*\
+  !*** ./public/icons/pg-complete.svg ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "svg-icon-pg-complete-usage",
+      viewBox: "0 0 24 24",
+      url: __webpack_require__.p + "./icons.svg#svg-icon-pg-complete",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./public/icons/plus.svg":
+/*!*******************************!*\
+  !*** ./public/icons/plus.svg ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "svg-icon-plus-usage",
+      viewBox: "0 0 27 27",
+      url: __webpack_require__.p + "./icons.svg#svg-icon-plus",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./public/icons/right-arrow.svg":
+/*!**************************************!*\
+  !*** ./public/icons/right-arrow.svg ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "svg-icon-right-arrow-usage",
+      viewBox: "0 0 25 24",
+      url: __webpack_require__.p + "./icons.svg#svg-icon-right-arrow",
       toString: function () {
         return this.url;
       }
@@ -222,8 +332,13 @@ var map = {
 	"./cart.svg": "./public/icons/cart.svg",
 	"./facebook.svg": "./public/icons/facebook.svg",
 	"./instagram.svg": "./public/icons/instagram.svg",
+	"./left-arrow.svg": "./public/icons/left-arrow.svg",
 	"./logo.svg": "./public/icons/logo.svg",
+	"./minus.svg": "./public/icons/minus.svg",
 	"./moon.svg": "./public/icons/moon.svg",
+	"./pg-complete.svg": "./public/icons/pg-complete.svg",
+	"./plus.svg": "./public/icons/plus.svg",
+	"./right-arrow.svg": "./public/icons/right-arrow.svg",
 	"./search.svg": "./public/icons/search.svg",
 	"./sun.svg": "./public/icons/sun.svg",
 	"./toggle.svg": "./public/icons/toggle.svg",
@@ -361,6 +476,61 @@ fetch('./dist/icons.svg').then(res => {
   return res.text();
 }).then(data => {
   document.getElementById('svg-icons-container').innerHTML = data;
+});
+let isDarkMode = localStorage.getItem('theme') === 'dark' ? true : false;
+
+function toggleTheme() {
+    isDarkMode = !isDarkMode;
+  
+    if (isDarkMode) {
+      displayTheme('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      displayTheme('light');
+      localStorage.setItem('theme', 'light');
+    }
+}
+function displayTheme(theme) {
+    document.body.setAttribute('data-theme', theme);
+}
+function changePhase(target, phase) {
+    target.setAttribute('data-phase', phase);
+}
+function bindClickEvent(selectorString, target, phase) {
+    document.querySelector(selectorString).addEventListener('click', changePhase.bind(null, target, phase));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector('#theme-toggle');
+    themeToggle.addEventListener('click', toggleTheme);
+
+    if (isDarkMode) {
+        displayTheme('dark');
+    } else {
+        displayTheme('light');
+    }
+
+    const phaseMap = {
+        'address': {
+            'next': 2
+        },
+        'shipping': {
+            'prev': 1,
+            'next': 3
+        },
+        'credit-card': {
+            'prev': 2,
+            'next': 3
+        }
+    };
+
+    const phaseAnchor = document.querySelector('section.register-container');
+    for (let phase in phaseMap) {
+        const phaseObject = phaseMap[phase];
+        for (let action in phaseObject) {
+            bindClickEvent(`section.button-group[data-phase="${phase}"] > .${action}`, phaseAnchor, phaseObject[action]);
+        }
+    }
 });
 })();
 

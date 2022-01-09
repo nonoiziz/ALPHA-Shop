@@ -70,15 +70,33 @@ table {
   --grey-700: #333333;
   --grey-400: #808080;
   --grey-300: #999999;
-  --background-color: #FFFFFF;
-  --footer-background-color: #F6F7F8;
-  --main-text: var(--grey-800);
-  --secondary-text: var(--grey-400);
-  --active-color: lightblue;
   --site-edge-margin: 15px;
   --main-font-family: 'Noto Sans TC', sans-serif; }
 
 body {
+  --background-color: #FFFFFF;
+  --footer-background-color: #F6F7F8;
+  --nav-icon: #2A2A2A;
+  --social-icon: #808080;
+  --main-text: #2A2A2A;
+  --secondary-text: #808080;
+  --active-color: lightblue;
+  --undone-progress-border: #F0F0F5;
+  --done-progress-border: #000000;
+  --progress-current-color: #2A2A2A;
+  --progress-done-color: #FFFFFF;
+  --progress-undone-color: #AFB1BD;
+  --pg-addr-color: #FFFFFF;
+  --pg-addr-bg-color: #2A2A2A;
+  --input-label: #808080;
+  --input-border: #4A4A4A;
+  --input-text: #999999;
+  --select-arrow: #2A2A2A;
+  --select-true: #2A2A2A;
+  --select-false: #999999;
+  --product-action-text: #000000;
+  --product-action-bg: #F0F0F5;
+  --left-arrow: #000000;
   background-color: var(--background-color);
   color: var(--main-text);
   font-family: var(--main-font-family);
@@ -416,18 +434,6 @@ label.burger-container {
   width: 24px;
   height: 24px; }
 
-body[dark=false] #theme-toggle > svg:nth-child(1) {
-  display: inline; }
-
-body[dark=false] #theme-toggle > svg:nth-child(2) {
-  display: none; }
-
-body[dark=true] #theme-toggle > svg:nth-child(1) {
-  display: none; }
-
-body[dark=true] #theme-toggle > svg:nth-child(2) {
-  display: inline; }
-
 @media screen and (max-width: 749.5px) {
   :root {
     --header-height: 56px;
@@ -479,381 +485,18 @@ body[dark=true] #theme-toggle > svg:nth-child(2) {
     opacity: 1;
     transform: scale(1); } }
 
-main .main-container .register-container[data-phase="1"] .progress-group.pg-1 .progress-icon, main .main-container .register-container[data-phase="2"] .progress-group.pg-2 .progress-icon, main .main-container .register-container[data-phase="3"] .progress-group.pg-3 .progress-icon {
-  color: var(--grey-800);
-  background-color: transparent;
-  border: 1px solid var(--grey-800); }
-
-main .main-container .register-container[data-phase="2"] .progress-group.pg-1 .progress-text, main .main-container .register-container[data-phase="3"] .progress-group.pg-1 .progress-text, main .main-container .register-container[data-phase="3"] .progress-group.pg-2 .progress-text, main .main-container .register-container[data-phase="1"] .progress-group.pg-1 .progress-text, main .main-container .register-container[data-phase="2"] .progress-group.pg-2 .progress-text, main .main-container .register-container[data-phase="3"] .progress-group.pg-3 .progress-text {
-  color: var(--grey-800); }
-
-main .main-container .register-container[data-phase="1"] .progress-group.pg-2 .progress-icon, main .main-container .register-container[data-phase="1"] .progress-group.pg-3 .progress-icon, main .main-container .register-container[data-phase="2"] .progress-group.pg-3 .progress-icon {
-  color: #AFB1BD;
-  background-color: transparent;
-  border: 1px solid #AFB1BD; }
-
-main .main-container .register-container[data-phase="1"] .progress-group.pg-2 .progress-text, main .main-container .register-container[data-phase="1"] .progress-group.pg-3 .progress-text, main .main-container .register-container[data-phase="2"] .progress-group.pg-3 .progress-text {
-  color: #AFB1BD; }
-
-main .main-container .register-container[data-phase="2"] .progress-group.pg-1 .progress-icon, main .main-container .register-container[data-phase="3"] .progress-group.pg-1 .progress-icon, main .main-container .register-container[data-phase="3"] .progress-group.pg-2 .progress-icon {
-  color: var(--white);
-  background-color: transparent; }
-
-main {
+main.site-main {
   margin-top: 80px;
-  background-color: inherit;
-  padding: 0 15px; }
-  main .main-container {
+  padding-left: var(--site-edge-margin);
+  padding-right: var(--site-edge-margin);
+  background-color: inherit; }
+  main.site-main .main-container {
     display: flex;
     position: relative;
-    justify-content: space-between;
     max-width: 1100px;
     margin: 0 auto;
-    background-color: inherit;
-    flex-wrap: wrap; }
-    main .main-container .register-container h2.register-title {
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 38px; }
-    main .main-container .register-container .progress-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 48px; }
-      main .main-container .register-container .progress-container .progress-bar {
-        display: flex;
-        flex-grow: 1;
-        max-width: 60px;
-        height: 1px;
-        margin: 0px 8px; }
-      main .main-container .register-container .progress-container .progress-group {
-        display: flex; }
-        main .main-container .register-container .progress-container .progress-group .progress-icon {
-          display: inline-block;
-          position: relative;
-          width: 24px;
-          height: 24px;
-          margin-right: 8px;
-          border-radius: 50%; }
-          main .main-container .register-container .progress-container .progress-group .progress-icon .text {
-            position: absolute;
-            top: 0px;
-            width: inherit;
-            height: inherit;
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 24px;
-            text-align: center; }
-          main .main-container .register-container .progress-container .progress-group .progress-icon .icon {
-            width: inherit;
-            height: inherit; }
-            main .main-container .register-container .progress-container .progress-group .progress-icon .icon > svg {
-              width: inherit;
-              height: inherit; }
-        main .main-container .register-container .progress-container .progress-group .progress-text {
-          font-weight: 400;
-          line-height: 24px; }
-    main .main-container .register-container[data-phase="1"] .progress-bar.pb-1 {
-      border: 2px solid #000000; }
-    main .main-container .register-container[data-phase="1"] .progress-bar.pb-2 {
-      border: 2px solid #F0F0F5; }
-    main .main-container .register-container[data-phase="1"] .progress-group.pg-1 .progress-icon .icon {
-      display: none; }
-    main .main-container .register-container[data-phase="1"] .progress-group.pg-1 .progress-icon .text {
-      display: inline-block; }
-    main .main-container .register-container[data-phase="1"] .progress-group.pg-1 .progress-icon {
-      color: var(--white);
-      background-color: var(--grey-800); }
-    main .main-container .register-container[data-phase="1"] .progress-group.pg-2 .progress-icon .icon {
-      display: none; }
-    main .main-container .register-container[data-phase="1"] .progress-group.pg-2 .progress-icon .text {
-      display: inline-block; }
-    main .main-container .register-container[data-phase="1"] .progress-group.pg-3 .progress-icon .icon {
-      display: none; }
-    main .main-container .register-container[data-phase="1"] .progress-group.pg-3 .progress-icon .text {
-      display: inline-block; }
-    main .main-container .register-container[data-phase="2"] .progress-bar.pb-1 {
-      border: 2px solid #000000; }
-    main .main-container .register-container[data-phase="2"] .progress-bar.pb-2 {
-      border: 2px solid #000000; }
-    main .main-container .register-container[data-phase="2"] .progress-group.pg-1 .progress-icon .icon {
-      display: inline-block; }
-    main .main-container .register-container[data-phase="2"] .progress-group.pg-1 .progress-icon .text {
-      display: none; }
-    main .main-container .register-container[data-phase="2"] .progress-group.pg-1 .progress-icon {
-      color: var(--white);
-      background-color: var(--grey-800); }
-    main .main-container .register-container[data-phase="2"] .progress-group.pg-2 .progress-icon .icon {
-      display: none; }
-    main .main-container .register-container[data-phase="2"] .progress-group.pg-2 .progress-icon .text {
-      display: inline-block; }
-    main .main-container .register-container[data-phase="2"] .progress-group.pg-3 .progress-icon .icon {
-      display: none; }
-    main .main-container .register-container[data-phase="2"] .progress-group.pg-3 .progress-icon .text {
-      display: inline-block; }
-    main .main-container .register-container[data-phase="3"] .progress-bar.pb-1 {
-      border: 2px solid #000000; }
-    main .main-container .register-container[data-phase="3"] .progress-bar.pb-2 {
-      border: 2px solid #000000; }
-    main .main-container .register-container[data-phase="3"] .progress-group.pg-1 .progress-icon .icon {
-      display: inline-block; }
-    main .main-container .register-container[data-phase="3"] .progress-group.pg-1 .progress-icon .text {
-      display: none; }
-    main .main-container .register-container[data-phase="3"] .progress-group.pg-1 .progress-icon {
-      color: var(--white);
-      background-color: var(--grey-800); }
-    main .main-container .register-container[data-phase="3"] .progress-group.pg-2 .progress-icon .icon {
-      display: inline-block; }
-    main .main-container .register-container[data-phase="3"] .progress-group.pg-2 .progress-icon .text {
-      display: none; }
-    main .main-container .register-container[data-phase="3"] .progress-group.pg-3 .progress-icon .icon {
-      display: none; }
-    main .main-container .register-container[data-phase="3"] .progress-group.pg-3 .progress-icon .text {
-      display: inline-block; }
-    main .main-container .register-container[data-phase="1"] .form-address {
-      display: flex; }
-    main .main-container .register-container[data-phase="1"] .form-shipping {
-      display: none; }
-    main .main-container .register-container[data-phase="1"] .form-credit-card {
-      display: none; }
-    main .main-container .register-container[data-phase="1"] ~ .progress-control-container .form-address-control {
-      display: flex; }
-    main .main-container .register-container[data-phase="1"] ~ .progress-control-container .form-shipping-control {
-      display: none; }
-    main .main-container .register-container[data-phase="1"] ~ .progress-control-container .form-credit-card-control {
-      display: none; }
-    main .main-container .register-container[data-phase="2"] .form-address {
-      display: none; }
-    main .main-container .register-container[data-phase="2"] .form-shipping {
-      display: flex; }
-    main .main-container .register-container[data-phase="2"] .form-credit-card {
-      display: none; }
-    main .main-container .register-container[data-phase="2"] ~ .progress-control-container .form-address-control {
-      display: none; }
-    main .main-container .register-container[data-phase="2"] ~ .progress-control-container .form-shipping-control {
-      display: flex; }
-    main .main-container .register-container[data-phase="2"] ~ .progress-control-container .form-credit-card-control {
-      display: none; }
-    main .main-container .register-container[data-phase="3"] .form-address {
-      display: none; }
-    main .main-container .register-container[data-phase="3"] .form-shipping {
-      display: none; }
-    main .main-container .register-container[data-phase="3"] .form-credit-card {
-      display: flex; }
-    main .main-container .register-container[data-phase="3"] ~ .progress-control-container .form-address-control {
-      display: none; }
-    main .main-container .register-container[data-phase="3"] ~ .progress-control-container .form-shipping-control {
-      display: none; }
-    main .main-container .register-container[data-phase="3"] ~ .progress-control-container .form-credit-card-control {
-      display: flex; }
-    main .main-container .form-container {
-      display: flex;
-      margin-top: 64px; }
-      main .main-container .form-container .form-title {
-        display: flex;
-        flex: 0 0 100%;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 24px; }
-      main .main-container .form-container .form-body .col {
-        justify-content: space-between; }
-      main .main-container .form-container .form-body .input-group {
-        margin-top: 24px; }
-        main .main-container .form-container .form-body .input-group .input-label {
-          font-weight: bold;
-          font-size: 12px;
-          line-height: 16px;
-          color: var(--grey-400);
-          margin-bottom: 8px; }
-        main .main-container .form-container .form-body .input-group .select-container {
-          position: relative; }
-          main .main-container .form-container .form-body .input-group .select-container::after {
-            z-index: -2;
-            pointer-events: none;
-            position: absolute;
-            top: 50%;
-            right: 12px;
-            transform: translateY(-50%);
-            content: "";
-            border-style: solid;
-            border-width: 6px 5px 0 5px;
-            border-color: var(--grey-800) transparent transparent transparent; }
-        main .main-container .form-container .form-body .input-group input, main .main-container .form-container .form-body .input-group select {
-          width: 100%;
-          font-weight: 400;
-          font-size: 12px;
-          font-family: 'Noto Sans TC', sans-serif;
-          line-height: 16px;
-          padding: 12px 16px;
-          border: 1px solid #4A4A4A;
-          border-radius: 4px; }
-        main .main-container .form-container .form-body .input-group input {
-          color: var(--grey-300); }
-        main .main-container .form-container .form-body .input-group select {
-          color: var(--grey-800);
-          background-color: transparent;
-          cursor: pointer;
-          -webkit-appearance: none; }
-          main .main-container .form-container .form-body .input-group select:required:invalid {
-            color: var(--grey-300); }
-          main .main-container .form-container .form-body .input-group select option {
-            color: var(--grey-800); }
-            main .main-container .form-container .form-body .input-group select option[value=""][disabled] {
-              display: none; }
-      main .main-container .form-container .form-body .radio-group {
-        position: relative;
-        justify-content: unset;
-        padding: 11px 20px;
-        margin-top: 24px; }
-        main .main-container .form-container .form-body .radio-group input[type='radio'] {
-          width: 20px;
-          height: 20px;
-          -webkit-appearance: none;
-          margin-right: 20px;
-          align-self: center; }
-        main .main-container .form-container .form-body .radio-group input[type='radio']::before {
-          content: '';
-          display: block;
-          width: inherit;
-          height: inherit;
-          border: 1px solid #222222;
-          border-radius: 50%; }
-        main .main-container .form-container .form-body .radio-group input[type='radio']:checked::before {
-          border: 6px solid var(--grey-800);
-          border: 50%; }
-        main .main-container .form-container .form-body .radio-group .radio-info {
-          display: flex;
-          flex-grow: 1;
-          flex-wrap: wrap;
-          align-content: center; }
-          main .main-container .form-container .form-body .radio-group .radio-info .col {
-            margin-bottom: 2px; }
-          main .main-container .form-container .form-body .radio-group .radio-info .shipping-text {
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 20px; }
-          main .main-container .form-container .form-body .radio-group .radio-info .shipping-price, main .main-container .form-container .form-body .radio-group .radio-info .shipping-period {
-            font-size: 12px;
-            line-height: 16px; }
-        main .main-container .form-container .form-body .radio-group .radio-box-border {
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0; }
-        main .main-container .form-container .form-body .radio-group input[type='radio'] ~ .radio-box-border {
-          border-radius: 4px;
-          border: 1px solid #F0F0F5; }
-        main .main-container .form-container .form-body .radio-group input[type='radio']:checked ~ .radio-box-border {
-          border: 1px solid #2A2A2A; }
-        main .main-container .form-container .form-body .radio-group #shipping-standard ~ .radio-info .shipping-text {
-          font-weight: normal; }
-        main .main-container .form-container .form-body .radio-group #shipping-dhl ~ .radio-info .shipping-text {
-          font-weight: 700; }
-    main .main-container .cart-container {
-      padding: 0px 24px;
-      margin-top: 166px;
-      border: 1px solid #F0F0F5;
-      border-radius: 8px; }
-      main .main-container .cart-container .cart-title {
-        display: flex;
-        flex: 0 0 100%;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 24px;
-        margin: 32px 0px; }
-      main .main-container .cart-container .product-list .product-container {
-        display: flex;
-        flex-wrap: nowrap;
-        margin-top: 2px;
-        margin-bottom: 32px; }
-        main .main-container .cart-container .product-list .product-container .img-container {
-          width: 100px;
-          height: 100px;
-          margin-right: 21px; }
-          main .main-container .cart-container .product-list .product-container .img-container > img {
-            width: inherit;
-            height: inherit; }
-        main .main-container .cart-container .product-list .product-container .product-info {
-          display: flex;
-          flex-wrap: wrap;
-          flex-grow: 1;
-          align-content: flex-start; }
-          main .main-container .cart-container .product-list .product-container .product-info .product-name {
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 400;
-            max-width: 60%;
-            margin-right: auto; }
-          main .main-container .cart-container .product-list .product-container .product-info .product-control-container {
-            order: 1;
-            display: block;
-            width: 100%; }
-          main .main-container .cart-container .product-list .product-container .product-info .product-control {
-            width: 116px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 18px;
-            margin-bottom: 17px; }
-            main .main-container .cart-container .product-list .product-container .product-info .product-control .product-action {
-              width: 27px;
-              height: 26px;
-              display: inline-block; }
-            main .main-container .cart-container .product-list .product-container .product-info .product-control .product-count {
-              display: inline-block; }
-          main .main-container .cart-container .product-list .product-container .product-info .product-price {
-            font-size: 16px;
-            line-height: 22px;
-            font-weight: 700; }
-      main .main-container .cart-container .cart-info {
-        border-top: 1px solid #F0F0F5;
-        padding-top: 16px;
-        padding-bottom: 32px;
-        align-items: center;
-        justify-content: space-between; }
-        main .main-container .cart-container .cart-info .text {
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 20px;
-          color: #2A2A2A; }
-        main .main-container .cart-container .cart-info .price {
-          font-weight: bold;
-          font-size: 14px;
-          line-height: 17px;
-          color: #000000; }
-    main .main-container .progress-control-container {
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      bottom: 0px; }
-      main .main-container .progress-control-container .button-group {
-        padding-top: 24px;
-        border-top: 1px solid #E6E6EB; }
-        main .main-container .progress-control-container .button-group > button {
-          height: 46px;
-          border-radius: 8px;
-          -o-object-position: 0 0;
-             object-position: 0 0;
-          border-width: 0px;
-          font-family: Inter, sans-serif;
-          font-size: 14px;
-          padding: 0px 0px; }
-          main .main-container .progress-control-container .button-group > button.prev {
-            background-color: transparent;
-            line-height: 20px;
-            font-weight: 400; }
-            main .main-container .progress-control-container .button-group > button.prev > span {
-              margin-right: 12px; }
-          main .main-container .progress-control-container .button-group > button.next {
-            width: 174px;
-            background: #F67599;
-            color: white;
-            margin-left: auto;
-            line-height: 17px;
-            font-weight: 500; }
-            main .main-container .progress-control-container .button-group > button.next > span {
-              margin-left: 12px; }
+    flex-wrap: wrap;
+    justify-content: space-between; }
 
 @media screen and (min-width: 749.5px) {
   .input-w-lg-1 {
@@ -879,48 +522,441 @@ main {
   .input-w-sm-full {
     width: 100%; }
   main {
-    margin-top: 16px; }
-    main .main-container .register-container .progress-container {
-      margin-top: 24px; }
-      main .main-container .register-container .progress-container .progress-group .progress-icon {
-        width: 32px;
-        height: 32px;
-        margin-right: 0px; }
-        main .main-container .register-container .progress-container .progress-group .progress-icon .text {
-          line-height: 32px; }
-      main .main-container .register-container .progress-container .progress-text {
-        display: none; }
-    main .main-container .register-container .form-container {
-      margin-top: 24px; }
-    main .main-container .cart-container {
-      margin-top: 32px;
-      padding-top: 18px; }
-      main .main-container .cart-container .cart-title {
-        display: none; }
-      main .main-container .cart-container .product-list .product-container .product-info {
-        flex-direction: column;
-        align-items: flex-end;
-        flex-wrap: nowrap;
-        justify-content: space-between; }
-        main .main-container .cart-container .product-list .product-container .product-info .product-name {
-          margin-right: unset;
-          max-width: unset; }
-        main .main-container .cart-container .product-list .product-container .product-info .product-control-container {
-          order: unset;
-          width: auto; }
-          main .main-container .cart-container .product-list .product-container .product-info .product-control-container .product-control {
-            margin-top: 0px;
-            margin-bottom: 0px; }
-      main .main-container .cart-container .cart-info {
-        padding-bottom: 16px; }
-    main .main-container .progress-control-container {
+    margin-top: 16px; } }
+
+section.register-container[data-phase="2"] .progress-group[data-phase="address"] .progress-icon .icon, section.register-container[data-phase="3"] .progress-group[data-phase="address"] .progress-icon .icon, section.register-container[data-phase="3"] .progress-group[data-phase="shipping"] .progress-icon .icon {
+  display: inline-block; }
+
+section.register-container[data-phase="2"] .progress-group[data-phase="address"] .progress-icon .text, section.register-container[data-phase="3"] .progress-group[data-phase="address"] .progress-icon .text, section.register-container[data-phase="3"] .progress-group[data-phase="shipping"] .progress-icon .text {
+  display: none; }
+
+section.register-container[data-phase="1"] .progress-group[data-phase="address"] .progress-icon .icon, section.register-container[data-phase="2"] .progress-group[data-phase="shipping"] .progress-icon .icon, section.register-container[data-phase="3"] .progress-group[data-phase="credit-card"] .progress-icon .icon, section.register-container[data-phase="1"] .progress-group[data-phase="shipping"] .progress-icon .icon, section.register-container[data-phase="1"] .progress-group[data-phase="credit-card"] .progress-icon .icon, section.register-container[data-phase="2"] .progress-group[data-phase="credit-card"] .progress-icon .icon {
+  display: none; }
+
+section.register-container[data-phase="1"] .progress-group[data-phase="address"] .progress-icon .text, section.register-container[data-phase="2"] .progress-group[data-phase="shipping"] .progress-icon .text, section.register-container[data-phase="3"] .progress-group[data-phase="credit-card"] .progress-icon .text, section.register-container[data-phase="1"] .progress-group[data-phase="shipping"] .progress-icon .text, section.register-container[data-phase="1"] .progress-group[data-phase="credit-card"] .progress-icon .text, section.register-container[data-phase="2"] .progress-group[data-phase="credit-card"] .progress-icon .text {
+  display: inline-block; }
+
+section.register-container[data-phase="1"] .progress-group[data-phase="address"] .progress-icon, section.register-container[data-phase="2"] .progress-group[data-phase="shipping"] .progress-icon, section.register-container[data-phase="3"] .progress-group[data-phase="credit-card"] .progress-icon, section.register-container[data-phase="2"] .progress-group[data-phase="address"] .progress-label, section.register-container[data-phase="3"] .progress-group[data-phase="address"] .progress-label, section.register-container[data-phase="3"] .progress-group[data-phase="shipping"] .progress-label, section.register-container[data-phase="1"] .progress-group[data-phase="address"] .progress-label, section.register-container[data-phase="2"] .progress-group[data-phase="shipping"] .progress-label, section.register-container[data-phase="3"] .progress-group[data-phase="credit-card"] .progress-label {
+  color: var(--progress-current-color); }
+
+section.register-container[data-phase="1"] .progress-group[data-phase="address"] .progress-icon, section.register-container[data-phase="2"] .progress-group[data-phase="shipping"] .progress-icon, section.register-container[data-phase="3"] .progress-group[data-phase="credit-card"] .progress-icon {
+  background-color: transparent;
+  border: 1px solid var(--progress-current-color); }
+
+section.register-container[data-phase="1"] .progress-group[data-phase="shipping"] .progress-icon, section.register-container[data-phase="1"] .progress-group[data-phase="credit-card"] .progress-icon, section.register-container[data-phase="2"] .progress-group[data-phase="credit-card"] .progress-icon, section.register-container[data-phase="1"] .progress-group[data-phase="shipping"] .progress-label, section.register-container[data-phase="1"] .progress-group[data-phase="credit-card"] .progress-label, section.register-container[data-phase="2"] .progress-group[data-phase="credit-card"] .progress-label {
+  color: var(--progress-undone-color); }
+
+section.register-container[data-phase="1"] .progress-group[data-phase="shipping"] .progress-icon, section.register-container[data-phase="1"] .progress-group[data-phase="credit-card"] .progress-icon, section.register-container[data-phase="2"] .progress-group[data-phase="credit-card"] .progress-icon {
+  background-color: transparent;
+  border: 1px solid var(--progress-undone-color); }
+
+section.register-container[data-phase="2"] .progress-group[data-phase="address"] .progress-icon, section.register-container[data-phase="3"] .progress-group[data-phase="address"] .progress-icon, section.register-container[data-phase="3"] .progress-group[data-phase="shipping"] .progress-icon {
+  color: var(--progress-done-color);
+  background-color: transparent; }
+
+section.register-container h2.register-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--main-text); }
+
+section.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px; }
+  section.progress-container .progress-bar {
+    display: flex;
+    flex-grow: 1;
+    max-width: 60px;
+    height: 1px;
+    margin: 0px 8px;
+    border-width: 2px;
+    border-style: solid; }
+  section.progress-container .progress-group {
+    display: flex; }
+    section.progress-container .progress-group .progress-icon {
+      display: inline-block;
       position: relative;
-      margin-top: 24px;
-      margin-bottom: 40px; }
-      main .main-container .progress-control-container .button-group > button.next {
-        width: 156px; }
-      main .main-container .progress-control-container .form-address-control button.next {
-        width: 100%; } }
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      border-radius: 50%; }
+      section.progress-container .progress-group .progress-icon .text {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 0px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: center;
+        color: inherit; }
+      section.progress-container .progress-group .progress-icon .icon {
+        width: inherit;
+        height: inherit; }
+    section.progress-container .progress-group .progress-label {
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--main-text); }
+
+section.register-container[data-phase="1"] .progress-bar[data-order='1'] {
+  border-color: var(--done-progress-border); }
+
+section.register-container[data-phase="1"] .progress-bar[data-order='2'] {
+  border-color: var(--undone-progress-border); }
+
+section.register-container[data-phase="1"] .progress-group[data-phase="address"] .progress-icon {
+  background-color: var(--pg-addr-bg-color);
+  border-color: var(--pg-addr-bg-color); }
+  section.register-container[data-phase="1"] .progress-group[data-phase="address"] .progress-icon .text {
+    color: var(--pg-addr-color); }
+
+section.register-container[data-phase="1"] form[data-phase="address"] {
+  display: flex; }
+
+section.register-container[data-phase="1"] ~ section.progress-control-container .button-group[data-phase="address"] {
+  display: flex; }
+
+section.register-container[data-phase="1"] form[data-phase="shipping"] {
+  display: none; }
+
+section.register-container[data-phase="1"] ~ section.progress-control-container .button-group[data-phase="shipping"] {
+  display: none; }
+
+section.register-container[data-phase="1"] form[data-phase="credit-card"] {
+  display: none; }
+
+section.register-container[data-phase="1"] ~ section.progress-control-container .button-group[data-phase="credit-card"] {
+  display: none; }
+
+section.register-container[data-phase="2"] .progress-bar[data-order='1'] {
+  border-color: var(--done-progress-border); }
+
+section.register-container[data-phase="2"] .progress-bar[data-order='2'] {
+  border-color: var(--done-progress-border); }
+
+section.register-container[data-phase="2"] .progress-group[data-phase="address"] .progress-icon {
+  background-color: var(--pg-addr-bg-color);
+  border-color: var(--pg-addr-bg-color); }
+  section.register-container[data-phase="2"] .progress-group[data-phase="address"] .progress-icon .text {
+    color: var(--pg-addr-color); }
+
+section.register-container[data-phase="2"] form[data-phase="address"] {
+  display: none; }
+
+section.register-container[data-phase="2"] ~ section.progress-control-container .button-group[data-phase="address"] {
+  display: none; }
+
+section.register-container[data-phase="2"] form[data-phase="shipping"] {
+  display: flex; }
+
+section.register-container[data-phase="2"] ~ section.progress-control-container .button-group[data-phase="shipping"] {
+  display: flex; }
+
+section.register-container[data-phase="2"] form[data-phase="credit-card"] {
+  display: none; }
+
+section.register-container[data-phase="2"] ~ section.progress-control-container .button-group[data-phase="credit-card"] {
+  display: none; }
+
+section.register-container[data-phase="3"] .progress-bar[data-order='1'] {
+  border-color: var(--done-progress-border); }
+
+section.register-container[data-phase="3"] .progress-bar[data-order='2'] {
+  border-color: var(--done-progress-border); }
+
+section.register-container[data-phase="3"] .progress-group[data-phase="address"] .progress-icon {
+  background-color: var(--pg-addr-bg-color);
+  border-color: var(--pg-addr-bg-color); }
+  section.register-container[data-phase="3"] .progress-group[data-phase="address"] .progress-icon .text {
+    color: var(--pg-addr-color); }
+
+section.register-container[data-phase="3"] form[data-phase="address"] {
+  display: none; }
+
+section.register-container[data-phase="3"] ~ section.progress-control-container .button-group[data-phase="address"] {
+  display: none; }
+
+section.register-container[data-phase="3"] form[data-phase="shipping"] {
+  display: none; }
+
+section.register-container[data-phase="3"] ~ section.progress-control-container .button-group[data-phase="shipping"] {
+  display: none; }
+
+section.register-container[data-phase="3"] form[data-phase="credit-card"] {
+  display: flex; }
+
+section.register-container[data-phase="3"] ~ section.progress-control-container .button-group[data-phase="credit-card"] {
+  display: flex; }
+
+section.form-container {
+  display: flex;
+  margin-top: 64px; }
+  section.form-container h3.form-title {
+    display: flex;
+    flex: 0 0 100%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px; }
+
+section.form-body .col {
+  justify-content: space-between; }
+
+section.form-body .input-group {
+  margin-top: 24px; }
+  section.form-body .input-group .input-label {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--input-label);
+    margin-bottom: 8px; }
+  section.form-body .input-group .select-container {
+    position: relative; }
+    section.form-body .input-group .select-container::after {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      z-index: -2;
+      pointer-events: none;
+      border-style: solid;
+      border-width: 6px 5px 0 5px;
+      border-color: var(--select-arrow) transparent transparent transparent;
+      content: ""; }
+  section.form-body .input-group input, section.form-body .input-group select {
+    width: 100%;
+    padding: 12px 16px;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 16px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: transparent; }
+  section.form-body .input-group input {
+    color: var(--input-text); }
+  section.form-body .input-group select {
+    color: var(--select-true);
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-appearance: none; }
+    section.form-body .input-group select:required:invalid {
+      color: var(--select-false); }
+    section.form-body .input-group select option {
+      color: var(--select-true); }
+      section.form-body .input-group select option[value=""][disabled] {
+        display: none; }
+
+section.form-body .radio-group {
+  position: relative;
+  justify-content: unset;
+  padding: 11px 20px;
+  margin-top: 24px;
+  cursor: pointer; }
+  section.form-body .radio-group input[type='radio'] {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    align-self: center;
+    -webkit-appearance: none; }
+  section.form-body .radio-group input[type='radio']::before {
+    content: '';
+    display: block;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #222222;
+    border-radius: 50%;
+    background-color: #FFFFFF; }
+  section.form-body .radio-group input[type='radio']:checked::before {
+    border: 6px solid #2A2A2A;
+    background-color: #FFFFFF; }
+  section.form-body .radio-group .radio-info {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-content: center; }
+    section.form-body .radio-group .radio-info .col {
+      margin-bottom: 2px; }
+    section.form-body .radio-group .radio-info .shipping-text {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 20px; }
+    section.form-body .radio-group .radio-info .shipping-price, section.form-body .radio-group .radio-info .shipping-period {
+      font-size: 12px;
+      line-height: 16px; }
+  section.form-body .radio-group .radio-box-border {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+  section.form-body .radio-group input[type='radio'] ~ .radio-box-border {
+    border-radius: 4px;
+    border: 1px solid #F0F0F5; }
+  section.form-body .radio-group input[type='radio']:checked ~ .radio-box-border {
+    border: 1px solid #2A2A2A; }
+  section.form-body .radio-group #shipping-standard ~ .radio-info .shipping-text {
+    font-weight: normal; }
+  section.form-body .radio-group #shipping-dhl ~ .radio-info .shipping-text {
+    font-weight: 700; }
+
+section.progress-control-container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
+
+section.button-group {
+  padding-top: 24px;
+  border-top: 1px solid #E6E6EB; }
+  section.button-group button {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    border-radius: 8px;
+    border-width: 0px;
+    padding: 0px; }
+    section.button-group button > svg {
+      width: 24px;
+      height: 24px; }
+    section.button-group button.prev {
+      background-color: transparent;
+      line-height: 20px;
+      font-weight: 400;
+      color: #000000; }
+      section.button-group button.prev > svg {
+        margin-right: 12px; }
+    section.button-group button.next {
+      justify-content: center;
+      width: 174px;
+      font-weight: 500;
+      line-height: 17px;
+      background: var(--pink);
+      color: #FFFFFF;
+      margin-left: auto; }
+      section.button-group button.next > svg {
+        margin-left: 12px; }
+
+@media screen and (max-width: 749.5px) {
+  section.progress-container {
+    margin-top: 24px; }
+    section.progress-container .progress-group .progress-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 0px; }
+      section.progress-container .progress-group .progress-icon .text {
+        line-height: 32px; }
+    section.progress-container .progress-label {
+      display: none; }
+  section.form-container {
+    margin-top: 24px; }
+  section.progress-control-container {
+    position: relative;
+    margin-top: 24px;
+    margin-bottom: 40px; }
+  section.button-group button.next {
+    width: 156px; }
+  section.button-group[data-phase='address'] button.next {
+    width: 100%; } }
+
+section.cart-container {
+  padding: 0px 24px;
+  margin-top: 166px;
+  border: 1px solid #F0F0F5;
+  border-radius: 8px; }
+  section.cart-container h3.cart-title {
+    display: flex;
+    flex: 0 0 100%;
+    margin: 32px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px; }
+
+section.product-list .product-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 2px;
+  margin-bottom: 32px; }
+  section.product-list .product-container .img-container {
+    width: 100px;
+    height: 100px;
+    margin-right: 21px; }
+  section.product-list .product-container .product-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-content: flex-start; }
+    section.product-list .product-container .product-info .product-name {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      max-width: 60%;
+      margin-right: auto; }
+    section.product-list .product-container .product-info .product-control-container {
+      display: block;
+      width: 100%;
+      order: 1; }
+    section.product-list .product-container .product-info .product-control {
+      display: flex;
+      width: 116px;
+      margin-top: 18px;
+      margin-bottom: 17px;
+      justify-content: space-between;
+      align-items: center; }
+      section.product-list .product-container .product-info .product-control .product-action {
+        display: inline-block;
+        width: 27px;
+        height: 26px;
+        cursor: pointer; }
+      section.product-list .product-container .product-info .product-control .product-count {
+        display: inline-block; }
+    section.product-list .product-container .product-info .product-price {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 700; }
+
+section.cart-info {
+  border-top: 1px solid #F0F0F5;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  align-items: center;
+  justify-content: space-between; }
+  section.cart-info .text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--main-text); }
+  section.cart-info .price {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000; }
+
+@media screen and (max-width: 749.5px) {
+  section.cart-container {
+    margin-top: 32px;
+    padding-top: 18px; }
+    section.cart-container h3.cart-title {
+      display: none; }
+  section.product-list .product-container .product-info {
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    justify-content: space-between; }
+    section.product-list .product-container .product-info .product-name {
+      margin-right: unset;
+      max-width: unset; }
+    section.product-list .product-container .product-info .product-control-container {
+      width: auto;
+      order: unset; }
+      section.product-list .product-container .product-info .product-control-container .product-control {
+        margin-top: 0px;
+        margin-bottom: 0px; }
+  section.cart-info {
+    padding-bottom: 16px; } }
 
 footer.site-footer {
   display: block;
@@ -979,6 +1015,62 @@ footer.site-footer {
 @media screen and (max-width: 749.5px) {
   footer.site-footer {
     display: none; } }
+
+body[data-theme='light'] #theme-toggle > svg:nth-child(1) {
+  display: inline; }
+
+body[data-theme='light'] #theme-toggle > svg:nth-child(2) {
+  display: none; }
+
+body[data-theme='dark'] {
+  --background-color: #121212;
+  --footer-background-color: #333333;
+  --nav-icon: rgba(255, 255, 255, 0.8);
+  --social-icon: rgba(255, 255, 255, 0.5);
+  --main-text: #FFFFFF;
+  --secondary-text: rgba(255, 255, 255, 0.6);
+  --undone-progress-border: rgba(240, 240, 245, 0.4);
+  --done-progress-border: #FFFFFF;
+  --progress-current-color: #FFFFFF;
+  --progress-done-color: #FFFFFF;
+  --progress-undone-color: #717171;
+  --pg-addr-color: #FFFFFF;
+  --pg-addr-bg-color: #333333;
+  --input-label: rgba(255, 255, 255, 0.4);
+  --input-border: #5E5E5E;
+  --input-text: rgba(255, 255, 255, 0.3);
+  --select-arrow: #5E5E5E;
+  --select-true: #FFFFFF;
+  --select-false: rgba(255, 255, 255, 0.3);
+  --product-action-text: #333333;
+  --product-action-bg: #808080;
+  --left-arrow: #FFFFFF; }
+  body[data-theme='dark'] #theme-toggle > svg:nth-child(1) {
+    display: none; }
+  body[data-theme='dark'] #theme-toggle > svg:nth-child(2) {
+    display: inline; }
+  body[data-theme='dark'] section.form-body .radio-group input[type='radio']::before {
+    border: none;
+    border-radius: 50%;
+    background-color: #333333; }
+  body[data-theme='dark'] section.form-body .radio-group input[type='radio']:checked::before {
+    border: 6px solid #333333;
+    background-color: #FFFFFF; }
+  body[data-theme='dark'] section.form-body .radio-group .radio-info .shipping-period {
+    color: rgba(255, 255, 255, 0.4); }
+  body[data-theme='dark'] section.form-body .radio-group input[type='radio'] ~ .radio-box-border {
+    border-color: #5E5E5E; }
+  body[data-theme='dark'] section.form-body .radio-group input[type='radio']:checked ~ .radio-box-border {
+    border-color: #FFFFFF; }
+  body[data-theme='dark'] section.cart-container {
+    background-color: #383838;
+    border-color: rgba(255, 255, 255, 0.2); }
+  body[data-theme='dark'] section.cart-info {
+    border-top-color: rgba(255, 255, 255, 0.2); }
+    body[data-theme='dark'] section.cart-info .price {
+      color: #FFFFFF; }
+  body[data-theme='dark'] section.progress-control-container section.button-group button.prev {
+    color: #FFFFFF; }
 
 
 /*# sourceMappingURL=main.css.map*/

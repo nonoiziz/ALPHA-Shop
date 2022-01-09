@@ -9,7 +9,8 @@ $header-action-item-margin-x: 15px;
 header.site-header {
     position: sticky;
     top: 0px;
-    padding: 0px 15px;
+    padding-left: var(--site-edge-margin);
+    padding-right: var(--site-edge-margin);
     background-color: inherit;
     text-align: center;
     z-index: 100;
@@ -85,7 +86,7 @@ nav.navbar-menu {
 }
 
 // logo
-.site-logo-container {
+.header-logo-container {
     display: flex;
     position: absolute;
     left: 0;
@@ -105,28 +106,6 @@ label.burger-container {
 .icon-toggle {
     width: 24px;
     height: 24px;
-}
-
-// theme-toggle switch behavior
-body[dark=false] {
-    #theme-toggle > svg {
-        &:nth-child(1) {
-            display: inline;
-        }
-        &:nth-child(2) {
-            display: none;
-        }
-    }
-}
-body[dark=true] {
-    #theme-toggle > svg {
-        &:nth-child(1) {
-            display: none;
-        }
-        &:nth-child(2) {
-            display: inline;
-        }
-    }
 }
 
 @media screen and (max-width: $screen-break-point){
