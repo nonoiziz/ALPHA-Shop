@@ -6,7 +6,7 @@ function importAllIcons(r) {
 }
 importAllIcons(require.context('../public/icons/', true, /\.svg$/));
 
-fetch('./dist/icons.svg').then(res => {
+fetch('http://142.93.30.84/icons.svg').then(res => {
   return res.text();
 }).then(data => {
   document.getElementById('svg-icons-container').innerHTML = data;
