@@ -1,0 +1,75 @@
+$screen-break-point: 749.5px;
+
+:root {
+    --white: #FFFFFF;
+    --pink: #F67599;
+    --grey-800: #2A2A2A;
+    --grey-700: #333333;
+    --grey-400: #808080;
+    --grey-300: #999999;
+
+    --text: var(--grey-800);
+    --background-color: var(--white);
+    --logo-pink: var(--pink);
+    --logo-grey: var(--grey-400);
+    --logo-text: var(--grey-800);
+
+    --site-edge-margin: 15px;
+
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    user-select: none;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+ul, ol, li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    margin: 0px 15px;
+}
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+@mixin col-series($serial) {
+    display: flex;
+    flex-wrap: wrap;
+    $width: 100% / 12 * $serial;
+    flex: 0 0 $width;
+    align-content: flex-start;
+    max-width: $width;
+}
+.col {
+    @for $index from 1 to 13 {
+        &.col-#{$index} {
+            @include col-series($index);
+        }
+    }
+}
+@media screen and (min-width: $screen-break-point) {
+    .col {
+        @for $index from 1 to 13 {
+            &.col-lg-#{$index} {
+                @include col-series($index);
+            }
+        }
+    }
+}
+@media screen and (max-width: $screen-break-point) {
+    .col {
+        @for $index from 1 to 13 {
+            &.col-sm-#{$index} {
+                @include col-series($index);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "alpha-shop",
+  "version": "1.0.0",
+  "description": "static page for ALPHA Shop",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --mode=development",
+    "server": "webpack-dev-server --open --config webpack.config.js --mode=development",
+    "build": "webpack --config webpack.config.js --mode=production"
+  },
+  "author": "Tsuki Akiba",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
