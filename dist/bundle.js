@@ -36,6 +36,50 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./public/icons/facebook.svg":
+/*!***********************************!*\
+  !*** ./public/icons/facebook.svg ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "svg-icon-facebook-usage",
+      viewBox: "0 0 24 24",
+      url: __webpack_require__.p + "./icons.svg#svg-icon-facebook",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./public/icons/instagram.svg":
+/*!************************************!*\
+  !*** ./public/icons/instagram.svg ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "svg-icon-instagram-usage",
+      viewBox: "0 0 24 24",
+      url: __webpack_require__.p + "./icons.svg#svg-icon-instagram",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./public/icons/logo.svg":
 /*!*******************************!*\
   !*** ./public/icons/logo.svg ***!
@@ -146,6 +190,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./public/icons/whatsapp.svg":
+/*!***********************************!*\
+  !*** ./public/icons/whatsapp.svg ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "svg-icon-whatsapp-usage",
+      viewBox: "0 0 24 24",
+      url: __webpack_require__.p + "./icons.svg#svg-icon-whatsapp",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./public/icons sync recursive \\.svg$":
 /*!***********************************!*\
   !*** ./public/icons/ sync \.svg$ ***!
@@ -154,11 +220,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var map = {
 	"./cart.svg": "./public/icons/cart.svg",
+	"./facebook.svg": "./public/icons/facebook.svg",
+	"./instagram.svg": "./public/icons/instagram.svg",
 	"./logo.svg": "./public/icons/logo.svg",
 	"./moon.svg": "./public/icons/moon.svg",
 	"./search.svg": "./public/icons/search.svg",
 	"./sun.svg": "./public/icons/sun.svg",
-	"./toggle.svg": "./public/icons/toggle.svg"
+	"./toggle.svg": "./public/icons/toggle.svg",
+	"./whatsapp.svg": "./public/icons/whatsapp.svg"
 };
 
 

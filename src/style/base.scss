@@ -8,26 +8,23 @@ $screen-break-point: 749.5px;
     --grey-400: #808080;
     --grey-300: #999999;
 
-    --text: var(--grey-800);
-    --background-color: var(--white);
-    --logo-pink: var(--pink);
-    --logo-grey: var(--grey-400);
-    --logo-text: var(--grey-800);
-
+    --background-color: #FFFFFF;
+    --footer-background-color: #F6F7F8;
     --main-text: var(--grey-800);
     --secondary-text: var(--grey-400);
     --active-color: lightblue;
 
     --site-edge-margin: 15px;
 
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 16px;
-    user-select: none;
+    --main-font-family: 'Noto Sans TC', sans-serif;
 }
 
 body {
     background-color: var(--background-color);
     color: var(--main-text);
+    font-family: var(--main-font-family);
+    font-size: 16px;
+    user-select: none;
 }
 
 ul, ol, li {
