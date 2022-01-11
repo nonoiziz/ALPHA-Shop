@@ -79,7 +79,7 @@
     <main class="site-main">
       <div class="main-container">
         <!-- register -->
-        <section class="register-container col col-lg-6 col-sm-12" data-phase="1">
+        <section class="register-container col col-lg-6 col-sm-12" data-phase="1" data-total-price="0">
           <!-- register-title -->
           <h2 class="register-title col col-12">結帳</h2>
 
@@ -198,25 +198,25 @@
             <form class="col col-12" data-phase="shipping">
               <h3 class="form-title">運送方式</h3>
               <section class="form-body col col-12">
-                <label class="radio-group col col-12">
+                <label class="radio-group col col-12" data-price="0">
                   <input id="shipping-standard" type="radio" name="shipping"  checked/>
                   <div class="radio-info">
                     <div class="col col-12">
-                      <div class="shipping-text">標準運送</div>
-                      <div class="shipping-price">免費</div>
+                      <div class="text">標準運送</div>
+                      <div class="price"></div>
                     </div>
-                    <div class="shipping-period col col-12">約 3~7 個工作天</div>
+                    <div class="period col col-12">約 3~7 個工作天</div>
                   </div>
                   <div class="radio-box-border"></div>
                 </label>
-                <label class="radio-group col col-12">
+                <label class="radio-group col col-12" data-price="500">
                   <input id="shipping-dhl" type="radio" name="shipping" />
                   <div class="radio-info">
                     <div class="col col-12">
-                      <div class="shipping-text">DHL 貨運</div>
-                      <div class="shipping-price">$500</div>
+                      <div class="text">DHL 貨運</div>
+                      <div class="price"></div>
                     </div>
-                    <div class="shipping-period col col-12">48 小時內送達</div>
+                    <div class="period col col-12">48 小時內送達</div>
                   </div>
                   <div class="radio-box-border"></div>
                 </label>
@@ -258,52 +258,52 @@
         <section class="cart-container col col-lg-5 col-sm-12">
           <h3 class="cart-title">購物籃</h3>
 
-          <section class="product-list col col-12">
-            <div class="product-container col col-12">
+          <section class="product-list col col-12" data-total-price="0">
+            <div class="product-container col col-12" data-count="0" data-price="3999">
               <img class="img-container"src="./public/images/product-1.jpg" />
               <div class="product-info">
                 <div class="product-name">破壞補丁修身牛仔褲</div>
                 <div class="product-control-container">
                   <div class="product-control">
-                    <svg class="product-action">
+                    <svg class="product-action minus">
                       <use xlink:href="#svg-icon-minus"></use>
                     </svg>
-                    <span class="product-count">1</span>
-                    <svg class="product-action">
+                    <span class="product-count"></span>
+                    <svg class="product-action plus">
                       <use xlink:href="#svg-icon-plus"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="product-price">$3,999</div>
+                <div class="price"></div>
               </div>
             </div>
-            <div class="product-container col col-12">
+            <div class="product-container col col-12" data-count="0" data-price="1299">
               <img class="img-container" src="./public/images/product-2.jpg" />
               <div class="product-info">
                 <div class="product-name">刷色直筒牛仔褲</div>
                 <div class="product-control-container">
                   <div class="product-control">
-                    <svg class="product-action">
+                    <svg class="product-action minus">
                       <use xlink:href="#svg-icon-minus"></use>
                     </svg>
-                    <span class="product-count">1</span>
-                    <svg class="product-action">
+                    <span class="product-count"></span>
+                    <svg class="product-action plus">
                       <use xlink:href="#svg-icon-plus"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="product-price">$1,299</div>
+                <div class="price"></div>
               </div>
             </div>
           </section>
 
           <section class="cart-info shipping col col-12">
             <div class="text">運費</div>
-            <div class="price">免費</div>
+            <div class="price"></div>
           </section>
           <section class="cart-info total col col-12">
             <div class="text">小計</div>
-            <div class="price">$5,298</div>
+            <div class="price"></div>
           </section>
         </section>
 
